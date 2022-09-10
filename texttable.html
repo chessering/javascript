@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var str = "<table border= '1'>";
+            str += "<tr>";
+            str += "<td>1</td><td>2</td><td>3</td>";
+            str += "</tr>";
+            str += "</table>";
+            document.write(str);
+            // 문자가 아닌 태그로 인식되어 출력(태그1 태그2 태그3)
+        var num1 = 10;
+        var num2 = 20;
+        var result;
+        num1--;
+        document.write(num1, "<br>"); // num1 = 9
+
+        num1++;
+        document.write(num2, "<br>");// num1 = 10
+
+        result = num2++;
+        document.write(result, "<br>"); // result = 20, num2 = 21
+
+        result == ++num2;
+        document.write(result, "<br>"); // result = 22, num2 = 22
+        // 변수-- or --변수 : 변수값 1만큼 감소
+        // 변수++ or ++변수 : 변수값 1만큼 증가
+        // var a = ++b; -> b 1만큼 증가 후 b값을 a에 대입
+        // var a = b++; -> b값을 a에 대입 후 b값 1 증가
+        var k = 10, m = "10";
+        k == 10; // true
+        m == 10; // true
+        m === 10; // false
+        // ==는 자료형태에 관계업이 표기만 일치하면 true,
+        // ===는 자료형과 표기가 모두 일치해야 true
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //방식 1
+        var arr1 = new Array();
+        arr1[0] = 1; arr1[1] = 2;
+        //방식 2
+        var arr2 = new Array(1,2,3,4);
+        //방식 3
+        var arr3 = [1,2,3,4,5];
+
+        var Arr = [30, "따르릉", true];
+
+        document.write("<h3>배열값 가져오기1</h3>");
+        document.write(Arr[0], "<br>");
+        document.write(Arr[1], "<br>");
+        document.write(Arr[2], "<br>");
+
+        document.write("<h3>배열값 가져오기2</h3>");
+        for (var i = 0; i < Arr.length; i++) {
+            document.write(Arr[i], "<br>");
+        }
+
+        document.write("<h3>배열값 가져오기3</h3>");
+        for (i in Arr) {
+            document.write(Arr[i], "<br>");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

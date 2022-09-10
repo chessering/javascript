@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //함수 호이스팅
+        var count = 0;
+        myFnc(); //호이스팅 방식 적용(함수에 이름 있어야함)
+
+        function myFnc() {
+            count++;
+            document.write("hello" +count, "<br>");
+        }
+
+        myFnc();
+
+        var theFnc = function() {//익명함수 선언참조방식(함수이름x)
+            count++;
+            document.write("bye"+count, "<br>");
+        }
+
+        theFnc();
+
+        //var, let, const
+        //var : 한번 선언된 변수 다시사용 가능, let은 x
+        //모든 var 변수는 변수선언이 코드 최상위로 끌어올려진 것처럼 동작(hoisting)
+        //let과 const도 hoisting은 적용됨, 그러나 error 발생
+        //Temporal Dead Zone(TDZ) 영역의 코드들은 사용 불가능하기때문
+        //모든 변수 생성 과정은 선언 - 초기화 - 할당을 거침
+        //var는 선언과 초기화가 동시에 진행됨
+        //let은 선언과 초기화가 분리되어 진행됨 -> reference에러 발생
+        //const는 선언과 할당이 동시에 되어야 함 -> 안될시 에러발생
+        //var는 함수 스코프, let, const는 블록 스코프
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

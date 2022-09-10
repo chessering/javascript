@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type = "text/javascript">
+        var today = new Date();
+        var nowYear = today.getFullYear();
+        var theDate = new Date(nowYear, 11, 31);
+        //연말까지 남은 기간 = 연말 날짜 - 현재 날짜
+        //new Date(year,month-1,day) or new Date(year/month/day)
+        var diffDate = theDate.getTime() - today.getTime();
+        //밀리초를 1로 계산.(반올림하여 현재 일까지 포함)
+        var result = Math.ceil(diffDate / (60 * 1000 * 60 * 24));
+        //Math 객체에 있는 ceil method를 사용 - 소수점 무조건 반올림
+        document.write("현재 일 로부터 올해 말일까지는" + result + "일 남았습니다.");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
